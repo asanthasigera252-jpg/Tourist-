@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asantha Sigera - Travel portfolio. Travel.">
+  <title>Asantha Sigera | Tourist</title>
+  <style>
+    :root {
+      --bg: #0b0f0e;
+      --text: #f5f3ed;
+      --muted: #b8b9b2;
+      --accent: #d8b56a;
+      --card: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.14);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+    .hero-content { max-width: 900px; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .35em;
+      color: var(--accent);
+      font-size: .8rem;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      line-height: .95;
+      margin-bottom: 18px;
+    }
+    .title {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .tagline {
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      font-weight: 300;
+      margin-bottom: 35px;
+    }
+    .buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 13px 24px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: .25s;
+    }
+    .btn.primary { background: var(--text); color: #111; }
+    .btn:hover { transform: translateY(-3px); }
+    section { padding: 100px 7%; max-width: 1300px; margin: auto; }
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .75rem;
+      margin-bottom: 10px;
+    }
+    h2 { font-size: clamp(2.2rem, 5vw, 4rem); margin-bottom: 25px; }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about p { color: var(--muted); font-size: 1.1rem; }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .stat, .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+    }
+    .stat strong { display: block; font-size: 2.5rem; }
+    .stat span { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card img { width: calc(100% + 56px); margin: -28px -28px 22px; height: 230px; object-fit: cover; border-radius: 22px 22px 0 0; }
+    .card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+    footer {
+      padding: 50px 7%;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+    @media (max-width: 800px) {
+      .about, .grid { grid-template-columns: 1fr; }
+      section { padding: 70px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">Personal Travel Portfolio</div>
+      <h1>Asantha Sigera</h1>
+      <div class="title">Tourist</div>
+      <div class="tagline">Travel.</div>
+      <div class="buttons">
+        <a class="btn primary" href="#journeys">Explore My Journey</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="about">
+        <div>
+          <div class="section-label">About Me</div>
+          <h2>Go somewhere. Experience something.</h2>
+          <p>
+            I'm Asantha, a curious traveler who loves discovering new places,
+            experiencing different cultures, meeting people, and collecting
+            memories along the way.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>15+</strong><span>Destinations</span></div>
+          <div class="stat"><strong>10+</strong><span>Cities Explored</span></div>
+          <div class="stat"><strong>100+</strong><span>Memories</span></div>
+          <div class="stat"><strong>∞</strong><span>Adventures</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journeys">
+      <div class="section-label">My Journeys</div>
+      <h2>Places I've explored</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80" alt="Travel destination">
+          <h3>Journey One</h3>
+          <p>Add your destination, travel date, story and highlights here.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Beach destination">
+          <h3>Journey Two</h3>
+          <p>Add another memorable destination and your personal story.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80" alt="Mountain destination">
+          <h3>Journey Three</h3>
+          <p>Share the experience, adventure and moments you discovered.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <div class="section-label">Destinations</div>
+      <h2>Discovering the world</h2>
+      <div class="grid">
+        <div class="card"><h3>Asia</h3><p>Add your favorite Asian destinations here.</p></div>
+        <div class="card"><h3>Nature</h3><p>Mountains, forests, waterfalls and unforgettable landscapes.</p></div>
+        <div class="card"><h3>Cities</h3><p>Explore the places, streets, food and culture of new cities.</p></div>
+      </div>
+    </section>
+
+    <section id="photography">
+      <div class="section-label">Photography</div>
+      <h2>Moments worth remembering</h2>
+      <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80" alt="Travel photograph"><h3>Moment One</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80" alt="Landscape photograph"><h3>Moment Two</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80" alt="Nature photograph"><h3>Moment Three</h3></div>
+      </div>
+    </section>
+
+    <section id="stories">
+      <div class="section-label">Travel Stories</div>
+      <h2>Stories from the road</h2>
+      <div class="grid">
+        <article class="card"><h3>My First Journey</h3><p>Write your first travel story here.</p></article>
+        <article class="card"><h3>The Road Less Traveled</h3><p>Share an adventure that was different from the usual path.</p></article>
+        <article class="card"><h3>Discovering Somewhere New</h3><p>Tell the story behind one of your favorite destinations.</p></article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <h2>Where should I go next?</h2>
+      <p style="color:var(--muted); margin-bottom:25px;">
+        Have a destination, story, or adventure to share? Get in touch.
+      </p>
+      <a class="btn primary" href="mailto:your@email.com">Email Me</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Asantha Sigera · Travel.</p>
+  </footer>
+
+</body>
+</html>
